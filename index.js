@@ -246,9 +246,15 @@ Use listOfNames to do the following:
 🌟 EXAMPLE of return: ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera"....]
 */
 
-function listOfNames(/*Your Code Here*/) {
-  /*Your Code Here*/
+function listOfNames(array) {
+  const newArr = [...array];
+  for (let i=0; i < newArr.length; i++) {
+    newArr[i] = newArr[i].name;
+  }
+  return newArr;
 }
+
+console.log(listOfNames(artists));
 
 
 
@@ -261,9 +267,14 @@ Use removeArtist to do the following:
 5. Return the resulting copied array
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
-function removeArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function removeArtist(array, index) {
+  let narray = [...array]
+  narray.splice(index, 1)
+
+  return narray;
 }
+
+console.log(removeArtist(artists, 0))
 
 
 
